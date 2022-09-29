@@ -64,6 +64,10 @@ let generateServerMakeCredRequest = (username, displayName, id) => {
         type: "public-key",
         alg: -7, // "ES256" IANA COSE Algorithms registry
       },
+      {
+        type: "public-key",
+        alg: -257, //"rs257 alg"
+      },
     ],
   };
 };

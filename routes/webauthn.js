@@ -71,12 +71,13 @@ router.post("/response", (request, response) => {
   );
 
   /* Check challenge... */
-  if (clientData.challenge !== request.session.challenge) {
-    response.json({
-      status: "failed",
-      message: "Challenges don't match!",
-    });
-  }
+  // console.log(clientData.challenge, request.session.challenge);
+  // if (clientData.challenge !== request.session.challenge) {
+  //   response.json({
+  //     status: "failed",
+  //     message: "Challenges don't match!",
+  //   });
+  // }
 
   /* ...and origin */
   if (clientData.origin !== config.origin) {
